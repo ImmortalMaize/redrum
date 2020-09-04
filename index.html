@@ -2,7 +2,7 @@
 <body style="background: black;" onload="setTimeout(die, 3000)">
 <div id="app" style="color: white; font-family: Times;">
 <h1 style="font-weight: normal;">{{ word }}</h1>
-<embed :src="music" autoplay="true" loop="true">
+	<audio autoplay><source :src="music" type="audio/wav"></audio>
 </div>
 </body>
 </html>
