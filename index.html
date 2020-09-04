@@ -1,7 +1,7 @@
 <html>
 <body style="background: black;" onload="setTimeout(die, 3000)">
 <div id="app" style="color: white; font-family: Times;">
-<h1 style="font-weight: normal;">{{ word }}</h1>
+<h1 style="font-weight: normal;">{{ emotion }}</h1>
 	<audio autoplay><source :src="music" type="audio/wav"></audio>
 </div>
 </body>
@@ -12,7 +12,7 @@ import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js
 new Vue({
 	el: '#app',
 	data: {
-		word: "=I"
+		emotion: "=I"
 	},
 	computed: {
 		music: function () {
@@ -37,9 +37,5 @@ new Vue({
 <script>
 function die() {
 			window.open('https://immortalmaize.github.io/redrum/', '', '', '');
-	window.open('https://immortalmaize.github.io/redrum/', '', '', '');
-	window.open('https://immortalmaize.github.io/redrum/', '', '', '');
-	window.open('https://immortalmaize.github.io/redrum/', '');
-	window.open('https://immortalmaize.github.io/redrum/', '');
 //  location.reload();
 }</script>
