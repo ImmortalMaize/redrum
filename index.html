@@ -3,7 +3,7 @@
 <div id="app" style="color: white; font-family: Times;">
 <h1 style="font-weight: normal;">{{ word }}</h1>
 {{ music }}
-<embed src="./BeepBox-Song.wav" autoplay="true">
+<embed :src="./BeepBox-Song.wav" autoplay="true" loop="true">
 </div>
 </body>
 </html>
@@ -19,16 +19,12 @@ new Vue({
 		music: function () {
 			const chance = Math.floor(Math.random() * 10)
 			return (
-			chance == 1 ? '1' :
-			chance == 2 ? '2' :
-			chance == 3 ? '3' :
-			chance == 4 ? '4' :
-			chance == 5 ? '5' :
-			chance == 6 ? '6' :
-			chance == 7 ? '7' :
-			chance == 8 ? '8' :
-			chance == 9 ? '9' :
-			'0')
+			chance == 1 ? './1. 2. Oatmeal..wav' :
+			chance == 2 ? './Copyright.wav' :
+			chance == 3 ? './GET SICK.wav' :
+			chance == 4 ? './Showtime.wav' :
+			chance == 5 ? './This beat is too... filthy..wav' :
+			'./BeepBox-Song.wav')
 		}
 	},
 	methods: {
