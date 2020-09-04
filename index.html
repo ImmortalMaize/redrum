@@ -1,11 +1,40 @@
 <html>
-<body onload="die()">
-  <h1>=I</h1>
+<body style="background: black;">
+<div id="app" style="color: white; font-family: 'Times';" v-on:load="die()">
+<h1 style="font-weight: normal;">{{ word }}</h1>
+{{ music }}
+</div>
 </body>
 </html>
-<script>
-function die() {
-  window.open('https://immortalmaize.github.io/redrum/', '');
+
+<script type="module">
+import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
+new Vue({
+	el: '#app',
+	data: {
+		word: "=I"
+	},
+	computed: {
+		music: function () {
+			const chance = Math.floor(Math.random() * 10)
+			return (
+			chance == 1 ? '1' :
+			chance == 2 ? '2' :
+			chance == 3 ? '3' :
+			chance == 4 ? '4' :
+			chance == 5 ? '5' :
+			chance == 6 ? '6' :
+			chance == 7 ? '7' :
+			chance == 8 ? '8' :
+			chance == 9 ? '9' :
+			'0')
+		}
+	},
+	methods: {
+		die: function() {
+			window.open('https://immortalmaize.github.io/redrum/', '');
   location.reload();
-}
+		}
+	}
+})
 </script>
