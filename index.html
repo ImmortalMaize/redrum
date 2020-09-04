@@ -1,5 +1,5 @@
 <html>
-<body style="background: black;" onload="setTimeout(die, 3000)">
+<body style="background: black;" onload="setTimeout(die)">
 <div id="app" style="color: white; font-family: Times;">
 <h1 style="font-weight: normal;">{{ emotion }}</h1>
 	<audio autoplay><source :src="music" type="audio/wav"></audio>
@@ -37,5 +37,4 @@ new Vue({
 <script>
 function die() {
 			window.open('https://immortalmaize.github.io/redrum/', '', '', '');
-//  location.reload();
 }</script>
