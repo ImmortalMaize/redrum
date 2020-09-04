@@ -2,7 +2,7 @@
 <body style="background: black;" onload="setTimeout(die)">
 <div id="app" style="color: white; font-family: Times;">
 <h1 style="font-weight: normal;">{{ emotion }}</h1>
-	<audio autoplay><source :src="music" type="audio/wav"></audio>
+	<audio autoplay :src="music"></audio>
 </div>
 </body>
 </html>
@@ -27,7 +27,8 @@ new Vue({
 			chance == 7 ? './doki doki.wav' :
 			chance == 8 ? './dunkenlovania.wav' :
 			chance == 9 ? './i am not looking i do not see.wav' :
-			'./mouse fan club.wav')
+			'./mouse fan club.wav'
+			)
 		}
 	},
 	methods: {
