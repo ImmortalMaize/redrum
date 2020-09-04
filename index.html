@@ -1,11 +1,10 @@
 <html>
-<div>
-<body style="background: black;" id="app" style="color: white; font-family: 'Times';" v-on:load="die()">
+<body style="background: black;" onload="die()">
+<div id="app" style="color: white; font-family: Times;">
 <h1 style="font-weight: normal;">{{ word }}</h1>
 {{ music }}
-
-</body>
 </div>
+</body>
 </html>
 
 <script type="module">
@@ -32,10 +31,11 @@ new Vue({
 		}
 	},
 	methods: {
-		die: function() {
-			window.open('https://immortalmaize.github.io/redrum/', '');
-  location.reload();
-		}
 	}
 })
 </script>
+<script>
+function die() {
+			window.open('https://immortalmaize.github.io/redrum/', '');
+  location.reload();
+}</script>
